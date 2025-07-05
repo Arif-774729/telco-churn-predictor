@@ -1,22 +1,22 @@
 📉 Telco Customer Churn Prediction
 
-A complete end-to-end data science project to predict whether a telecom customer is likely to churn. This project covers data analysis, machine learning modeling, and deployment using Streamlit.
+An end-to-end machine learning project to predict whether a telecom customer is likely to churn. This project demonstrates data preprocessing, exploratory data analysis, model building, evaluation, and deployment using Streamlit.
 
 -- Dataset Overview
 
 Source: Telco Customer Churn dataset
 
-Size: 7043 records, 21 features
+Records: 7043
 
-Target Variable: Churn (Yes/No)
+Features: 21 (including the target Churn)
 
-Features include:
+Key Feature Categories:
 
 Demographics: Gender, SeniorCitizen, Partner, Dependents
 
-Services: InternetService, PhoneService, TechSupport, StreamingTV, etc.
+Services: InternetService, PhoneService, TechSupport, StreamingTV, StreamingMovies
 
-Contract & Payment: Contract type, Payment method, PaperlessBilling
+Billing & Contracts: Contract type, Payment method, PaperlessBilling
 
 Usage & Charges: Tenure, MonthlyCharges, TotalCharges
 
@@ -26,63 +26,63 @@ Usage & Charges: Tenure, MonthlyCharges, TotalCharges
 
 Churn Rate: ~26.58%
 
-High Churn Groups:
+Groups with High Churn:
 
-Senior Citizens (with ~90% churn for label 1)
+Senior Citizens (~90% churn in class 1)
 
-Customers without Tech Support
+Users without Tech Support
 
-Customers on Month-to-Month contracts
+Month-to-Month contract users
 
-Fiber optic internet users
+Fiber Optic internet subscribers
 
-Low Churn Groups:
+Groups with Low Churn:
 
-Customers with Two-Year Contracts
+Users with Two-Year contracts
 
-Customers with Tech Support
+Customers who opted for Tech Support
 
-Those with no internet service (also low engagement)
+Users with no Internet service
 
--- Visual Highlights:
+--Visual Highlights:
 
 Contract Type vs Churn:
 
-Month-to-Month: Highest churn (~43%)
+Month-to-Month: ~43% churn rate
 
-Two Year: Lowest (~3.6%)
+Two Year: ~3.6% churn rate
 
 Tech Support Impact:
 
-No Tech Support: Churn Rate ~45%
+Without Tech Support: ~45% churn
 
-With Tech Support: Churn ~15%
+With Tech Support: ~15% churn
 
 Streaming Services:
 
-No Streaming TV: Slightly higher churn
+Users without Streaming TV churn slightly more
 
-Tenure & Monthly Charges:
+Tenure & Charges:
 
-Low tenure users are more likely to churn
+Customers with short tenure are more likely to churn
 
-High charges increase churn likelihood
+Higher Monthly Charges correlates with increased churn
 
--- Feature Engineering & Preprocessing
+--Feature Engineering & Preprocessing
 
-Encoded categorical variables using one-hot encoding
+Applied one-hot encoding to categorical variables
 
-Converted TotalCharges to numeric (handled empty string conversion)
+Cleaned and converted TotalCharges to numeric
 
-Mapped target variable Churn to binary: Yes = 1, No = 0
+Mapped Churn: Yes = 1, No = 0
 
-Removed irrelevant feature: customerID
+Dropped unnecessary identifier: customerID
 
 --Model Building & Evaluation
 
-Trained multiple models and compared their performance.
+Experimented with several classification models and evaluated them using key metrics. Logistic Regression delivered the best balance of interpretability and performance.
 
-Final Chosen Model: Logistic Regression
+--Performance Comparison:
 
 Model
 
@@ -144,51 +144,42 @@ Naive Bayes
 
 0.56
 
-Confusion Matrix (Logistic Regression)
+Confusion Matrix (Logistic Regression):
 
 [[913 120]
  [161 213]]
 
 --Streamlit Deployment
 
-Built an interactive Streamlit web app where users can input customer details and get real-time churn predictions.
+We built and deployed a user-friendly web app using Streamlit where users can input customer data and receive real-time churn predictions.
 
-Live Demo:
+-- Live Demo: https://telco-churn-predictor-k6vuh7nehjf6dprtmykawq.streamlit.app/
 
-🌐 https://telco-churn-predictor-k6vuh7nehjf6dprtmykawq.streamlit.app/
+📝 App Features:
 
-Inputs:
+Input fields for customer profile (demographics, services, contract type, charges)
 
-Gender, Senior Status, Partner, Dependents
+Prediction result: Churn or No Churn
 
-Tenure, Monthly Charges, Total Charges
+Confidence score (prediction probability)
 
-Contract Type, Internet Service, Tech Support, etc.
+-- Repository Structure
 
-Output:
-
-Prediction: Churn / No Churn
-
-Confidence Score (probability)
-
-📁 Repository Structure
-
-|- app.py                # Streamlit app script
-|- log_model.pkl         # Trained logistic regression model
-|- telco_churn_analysis.ipynb  # Full Kaggle notebook (EDA + modeling)
-|- requirements.txt      # Python dependencies
-|- README.md             # Project documentation
+|- app.py                      # Streamlit app code
+|- log_model.pkl               # Saved trained model
+|- telco_churn_analysis.ipynb  # Kaggle notebook with full analysis
+|- requirements.txt            # Project dependencies
+|- README.md                   # Project documentation
 
 -- Key Takeaways
 
-Model achieved 80% accuracy on test set
+Achieved 80% accuracy using Logistic Regression
 
-Streamlit app deployed successfully for real-time predictions
+Identified high-risk customer segments through EDA
 
-End-to-end workflow covered: from EDA to deployment
-
-Project ready for portfolio and resume
+Fully deployed an interactive web app with Streamlit
 
 💼 Author
 
-Arif Raza
+Arif-774729
+
