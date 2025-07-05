@@ -151,7 +151,7 @@ Confusion Matrix (Logistic Regression):
 
 --Streamlit Deployment
 
-We built and deployed a user-friendly web app using Streamlit where users can input customer data and receive real-time churn predictions.
+Built and deployed a user-friendly web app using Streamlit where users can input customer data and receive real-time churn predictions.
 
 -- Live Demo: https://telco-churn-predictor-k6vuh7nehjf6dprtmykawq.streamlit.app/
 
