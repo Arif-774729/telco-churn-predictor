@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-# Load the trained logistic regression model
+
 with open("log_model.pkl", "rb") as file:
     model = pickle.load(file)
 
@@ -23,7 +23,7 @@ total_charges = st.number_input("Total Charges", min_value=0.0, value=1000.0, st
 contract = st.selectbox("Contract Type", ['Month-to-month', 'One year', 'Two year'])
 internet_service = st.selectbox("Internet Service", ['DSL', 'Fiber optic', 'No'])
 
-# Encode categorical variables (you may need to adjust based on your feature engineering)
+
 def preprocess_input():
     data = {
         'gender': gender,
@@ -38,16 +38,16 @@ def preprocess_input():
     }
 
     input_df = pd.DataFrame([data])
-    # Encode like in training (dummy encoding)
+    
     cat_features = ['gender', 'Partner', 'Dependents', 'Contract', 'InternetService']
     input_df = pd.get_dummies(input_df, columns=cat_features)
 
-    # Add missing columns if any
+   
     for col in model.feature_names_in_:
         if col not in input_df.columns:
             input_df[col] = 0
 
-    # Ensure order
+    
     input_df = input_df[model.feature_names_in_]
 
     return input_df
