@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 
 
-with open("log_model.pkl", "rb") as file:
+with open("naive_bayes_model.pkl", "rb") as file:
     model = pickle.load(file)
 
 st.set_page_config(page_title="Churn Predictor", layout="centered")
@@ -62,3 +62,4 @@ if st.button("Predict Churn"):
         st.error(f"⚠️ This customer is likely to churn. (Probability: {prob:.2f})")
     else:
         st.success(f"✅ This customer is likely to stay. (Probability: {1 - prob:.2f})")
+
