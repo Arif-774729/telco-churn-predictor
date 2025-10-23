@@ -78,76 +78,6 @@ Mapped Churn: Yes = 1, No = 0
 
 Dropped unnecessary identifier: customerID
 
---Model Building & Evaluation
-
-Experimented with several classification models and evaluated them using key metrics. Logistic Regression delivered the best balance of interpretability and performance.
-
---Performance Comparison:
-
-Model
-
-Accuracy
-
-Precision
-
-Recall
-
-F1 Score
-
-Logistic Regression
-
-0.80
-
-0.64
-
-0.57
-
-0.60
-
-Random Forest
-
-0.79
-
-0.63
-
-0.52
-
-0.57
-
-SVM
-
-0.79
-
-0.63
-
-0.49
-
-0.55
-
-XGBoost
-
-0.77
-
-0.57
-
-0.52
-
-0.54
-
-Naive Bayes
-
-0.64
-
-0.42
-
-0.86
-
-0.56
-
-Confusion Matrix (Logistic Regression):
-
-[[913 120]
- [161 213]]
 
 --Streamlit Deployment
 
@@ -156,8 +86,6 @@ Built and deployed a user-friendly web app using Streamlit where users can input
 -- Live Demo: https://telco-churn-predictor-k6vuh7nehjf6dprtmykawq.streamlit.app/
 
 📝 App Features:
-
-Input fields for customer profile (demographics, services, contract type, charges)
 
 Prediction result: Churn or No Churn
 
