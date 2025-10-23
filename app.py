@@ -14,7 +14,7 @@ except FileNotFoundError:
 
 st.set_page_config(page_title="Churn Predictor", layout="centered")
 
-st.title("📉 Telco Customer Churn Predictor")
+st.title(" ☎️ Telco Customer Churn Predictor")
 st.markdown("This app predicts whether a customer is likely to churn based on their profile. We use features proven most important by the Naive Bayes model.")
 
 # --- Collect User Input (Excluding Gender) ---
@@ -155,3 +155,4 @@ if st.button("Predict Churn"):
                 
     except Exception as e:
         st.error(f"An error occurred during preprocessing or prediction: {e}")
+
